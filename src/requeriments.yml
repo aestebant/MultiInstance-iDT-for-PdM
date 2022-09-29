@@ -1,4 +1,6 @@
 name: miidt-env
+channels:
+  - conda-forge
 dependencies:
   - python~=3.9
   - numpy~=1.22
