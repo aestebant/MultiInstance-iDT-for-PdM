@@ -11,10 +11,11 @@ Associated repository to the paper <span style="color:red">[FULL CITE]</span> wi
 The aim of the proposals developed in this work is the Time Series Classification in a context of system degradation and weak labeling environment. The proposals have been conceptualized under the paradigm of Multi-Instance Learning, using Incremental Decision Trees for the classification at instance level. The code is structured under the [src](https://github.com/aestebant/MI-IDTforTSC/blob/main/src) folder with the following structure:
 ```
 src
-│   requeriments.yml    
+│   requeriments.yml
+│   tutorial.ipynb
 │
 └───mi-idt
-│   │   mil_idt_tsc.py > MI-HT, MI-HATT, MI-HAT.
+│   │   milidt_tsc.py > Implementation of MI-HT, MI-HATT, MI-HAT.
 │   
 └───comparison
 │    │   sil_idt_tsc.py > Infraestructure for training/testing HT, HATT, HAT.
@@ -25,6 +26,8 @@ src
 ```
 
 The development environment is based on Python >=3.9, with a special mention to the library [`scikit-multiflow`](https://scikit-multiflow.github.io) as the base for the implementation of the incremental decision trees. The complete list of libraries to replicate the environment is available in [requeriments.yml](https://github.com/aestebant/MI-IDTforTSC/blob/main/src/requeriments.yml).
+
+The Jupyter notebook [tutorial.ipnb](https://github.com/aestebant/MI-IDTforTSC/blob/main/src/tutorial.ipynb) describes a complete tutorial for using the presented library, including loading data, building and testing the classification model, and accessing to the interpretability resources.
 
 ## Datasets
 

@@ -401,19 +401,3 @@ class MilDlTsc:
             result = self.scce(y_true, y_pred)
             self.losses.extend(result.numpy())
             return result
-
-
-if __name__ == '__main__':
-    data_path = "turbofan_categorical"
-    data_key = "FD001"
-    cols = ['unit'] + [f"s{i}" for i in range(1, 22)] + ['HS']#['unit', 'DE', 'FE', 'BA', 'RPM', 'HS']
-    n_inputs, n_outputs = 21, 3
-    train_df = pd.read_csv(f"{data_path}/train_{data_key}.csv")
-    test_df = pd.read_csv(f"{data_path}/test_{data_key}.csv")
-
-    train_data = train_df[cols].to_numpy()
-    test_data = test_df[cols].to_numpy()
-
-    mi_dl = MilDlTsc('CNN', n_inputs=n_inputs, n_outputs=n_outputs, inst_len=10, inst_stride=3, batch_size=1)
-    train_result = mi_dl.train(train_data, epochs=2)
-    test_result = mi_dl.test(test_data)

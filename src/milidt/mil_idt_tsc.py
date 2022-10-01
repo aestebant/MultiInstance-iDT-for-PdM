@@ -18,6 +18,7 @@ class MilIdtTsc:
         - 'HT' - Hoeffding Tree (Very Fast Decision Tree)
         - 'HATT' - Hoeffding Anytime Tree (Extremely Fast Decision Tree)
         - 'HAT - Hoeffding Adaptive Tree
+
     inst_len
         Length of the instances to split the sequence.
     inst_stride

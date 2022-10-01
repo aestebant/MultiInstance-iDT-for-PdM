@@ -184,18 +184,3 @@ class SilFeTsc:
                     result['kurtosis'].append(kurtosis(seq, axis=None))
 
         return pd.DataFrame(result)
-
-
-if __name__ == '__main__':
-    data_path = "bearing_processed"
-    data_key = "drive-innerrace-1200-2"
-    cols = ['unit', 'DE', 'FE', 'BA', 'RPM', 'HS']#['unit'] + [f"s{i}" for i in range(1, 22)] + ['HS']
-    train_df = pd.read_csv(f"{data_path}/train_{data_key}.csv")
-    test_df = pd.read_csv(f"{data_path}/test_{data_key}.csv")
-
-    train_data = train_df[cols].to_numpy()
-    test_data = test_df[cols].to_numpy()
-
-    simple_fe_tsc = SilFeTsc('NB')
-    train_result = simple_fe_tsc.train(train_data)
-    test_result = simple_fe_tsc.test(test_data)
