@@ -22,7 +22,7 @@ src
 │    │   sil_fe_tsc.py > Classic ML algorithms based on feature extraction over temporal data.
 │    │   mil_dl_tsc.py > Deep learning from MI approach.
 │   
-└───misc > Auxiliary functions for information printing.
+└───dataprep > Auxiliary functions to prepare the datasets for MIL
 ```
 
 The development environment is based on Python >=3.9, with a special mention to the library [`scikit-multiflow`](https://scikit-multiflow.github.io) as the base for the implementation of the incremental decision trees. The complete list of libraries to replicate the environment is available in [requeriments.yml](https://github.com/aestebant/MI-IDTforTSC/blob/main/src/requeriments.yml).
@@ -46,7 +46,11 @@ This work tests its results in two popular Predictive Maintenance problems: [NAS
 
 ### Datasets transformation
 
-<span style="color:red"> \#ToDo </span>
+Both NASA and CWRU datasets have required transformations to work in a multi-instance fault-detection framework. The transformation code is available under the fold [src/dataprep](https://github.com/aestebant/MI-IDTforTSC/blob/main/src/dataprep).
+
+The original target of the NASA Ames Turbofan Engine Degradation dataset is the remaining useful life estimation, i.e., a regression task. Thus, the transformations go in the direction of generating a ground truth that associates each time series with a health state degradation state.
+
+In the case of the CWRU bearing dataset, the target is the fault identification directly, but the working sequences are not ready to use in a machine learning model because they are in separate files corresponding to a single complete experiment. Thus, the transformations consist of splitting the sequences into separate time series, mixing all the degradation states in a single pool, and creating separate sets for training and testing the machine learning models.
 
 ## Results
 
