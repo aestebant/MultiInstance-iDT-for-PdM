@@ -1,6 +1,6 @@
-# MI-IDTforTSC: *Multi-Instance Learning and Incremental Decision Trees for failure detection in industrial equipment*: additional materials
+# MultiInstance iDT for PdM: *Multi-Instance Learning and Incremental Decision Trees for failure detection in industrial equipment*: additional materials
 
-Associated repository to the paper <span style="color:red">[FULL CITE]</span> with complementary material:
+Associated repository with complementary material to the manuscript *Multi-Instance Learning and Incremental Decision Trees for failure detection in industrial equipment* [submitted to *Expert Systems with Applications*]:
 
 * Source code of the MI-IDT proposals.
 * Datasets used in the experimentation.
