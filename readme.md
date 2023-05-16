@@ -17,11 +17,6 @@ src
 └───mi-idt
 │   │   milidt_tsc.py > Implementation of MI-HT, MI-HATT, MI-HAT.
 │   
-└───comparison
-│    │   sil_idt_tsc.py > Infraestructure for training/testing HT, HATT, HAT.
-│    │   sil_fe_tsc.py > Classic ML algorithms based on feature extraction over temporal data.
-│    │   mil_dl_tsc.py > Deep learning from MI approach.
-│   
 └───dataprep > Auxiliary functions to prepare the datasets for MIL
 ```
 
