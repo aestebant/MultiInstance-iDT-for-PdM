@@ -20,7 +20,7 @@ src
 └───dataprep > Auxiliary functions to prepare the datasets for MIL
 ```
 
-The development environment is based on Python >=3.9, with a special mention to the library [`scikit-multiflow`](https://scikit-multiflow.github.io) as the base for the implementation of the incremental decision trees. The complete list of libraries to replicate the environment is available in [requirements.yml](requeriments.yml).
+The development environment is based on Python >=3.9, with a special mention to the library [`scikit-multiflow`](https://scikit-multiflow.github.io) as the base for the implementation of the incremental decision trees. The complete list of libraries to replicate the environment is available in [requirements.yml](requirements.yml).
 
 The Jupyter notebook [tutorial.ipnb](tutorial.ipynb) describes a complete tutorial for using the presented library, including loading data, building and testing the classification model, and accessing to the interpretability resources.
 
